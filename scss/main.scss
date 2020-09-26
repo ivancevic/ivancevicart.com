@@ -114,10 +114,39 @@ main {
 }
 
 // My Work
+
+#work ul {
+  list-style-type: none;
+  margin-bottom: 2rem;
+  padding: 0;
+
+  li {
+    display: inline-block;
+  }
+}
+
 .projects {
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(3, 1fr);
+
+  figcaption {
+    background-color: black;
+    color: white;
+    font-style: italic;
+    padding: 0.5rem 1rem;
+    border: 0;
+    margin-bottom: 0.3rem;
+    text-align: center;
+
+    .status-available {
+      color: $status-available;
+    }
+
+    .status-sold {
+      color: $status-sold;
+    }
+  }
 
   img {
     width: 100%;
@@ -145,7 +174,7 @@ main {
     margin-bottom: 3rem;
     @include easeOut;
 
-    &::hover {
+    &:hover {
       padding: 0.5rem 1.5rem;
       background: $secondary-color;
       color: set-text-color($secondary-color);
